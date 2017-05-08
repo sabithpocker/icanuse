@@ -1,0 +1,36 @@
+
+# compiled output
+/icanuse/dist
+/icanuse/tmp
+/icanuse/out-tsc
+
+# dependencies
+node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+
+# misc
+/icanuse/.sass-cache
+/icanuse/connect.lock
+/icanuse/coverage
+/icanuse/libpeerconnection.log
+/icanuse/npm-debug.log
+/icanuse/testem.log
+/icanuse/typings
+
+# e2e
+/icanuse/e2e/icanuse/*.js
+/icanuse/e2e/icanuse/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+

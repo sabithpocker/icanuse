@@ -1,0 +1,13 @@
+<md-card>
+	<md-card-title>Browser Support</md-card-title>
+	<md-card-content>
+		<md-list dense>
+		 <md-list-item *ngFor="let browser of browsers"> 
+		 	<md-chip-list *ngIf="browserSupport">
+		 		<md-basic-chip>{{browser}}</md-basic-chip>
+		 		<md-basic-chip *ngFor="let version of browserSupport[browser] | objNgFor" [ngClass]="browserSupport[browser][version]"> {{version}} </md-basic-chip>
+		 	</md-chip-list>
+		  </md-list-item>
+		</md-list>
+	</md-card-content>
+</md-card>

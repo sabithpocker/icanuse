@@ -1,0 +1,17 @@
+<md-card>
+	<md-card-title>Enter Features</md-card-title>
+	<md-card-content>
+		<md-input-container>
+		  <input mdInput placeholder="Feature" [mdAutocomplete]="auto" [formControl]="featureCtrl" #selectedFeature>
+		</md-input-container>
+		<md-autocomplete #auto="mdAutocomplete">
+		   <md-option *ngFor="let feature of filteredFeatures | async" [value]="feature">
+		      {{ feature }}
+		   </md-option>
+		</md-autocomplete>
+		<button md-raised-button color="primary" (click)="addFeature(selectedFeature.value)">Add Feature</button>
+		<md-chip-list>
+			<md-chip *ngFor="let feature of selectedFeatures">{{feature}}</md-chip>
+		</md-chip-list>
+	</md-card-content>
+</md-card>
